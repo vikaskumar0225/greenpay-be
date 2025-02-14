@@ -10,11 +10,11 @@ dotenv.config();
 const app=express();
 app.use(cors());
 app.use(express.json());
-app.use('/stream/dashboardRoutes',dashboardRoutes);
-app.use('/stream/uiRoutes',uiRoutes);
-app.use('/stream/authRoutes',authRoutes);
+app.use('/api/dashboardRoutes',dashboardRoutes);
+app.use('/api/ui',uiRoutes);
+app.use('/api/authRoutes',authRoutes);
 const PORT= process.env.PORT || 4000;
-console.log("the port that is used is ",PORT);
+
 app.listen(PORT,()=>{
     console.log(`server is ready at http://localhost:${PORT}`);
 });
